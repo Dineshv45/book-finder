@@ -13,7 +13,7 @@ export default function BookDetails() {
     if (book) {
       document.title = `${book.title} - 📚 Book Finder`;
 
-      // 🔑 check edition for preview availability
+      // check edition for preview availability
       if (book.edition_key?.length > 0) {
         const olid = book.edition_key[0];
         fetch(
