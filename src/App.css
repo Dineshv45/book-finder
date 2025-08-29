@@ -204,7 +204,7 @@ body{
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  text-decoration: none; /* ensures Link looks like a button */
+  text-decoration: none; 
   display: inline-block;
 }
 
