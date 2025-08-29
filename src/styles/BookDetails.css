@@ -1,0 +1,129 @@
+.book-details {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+}
+
+.detail-cover {
+  max-width: 180px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.detail-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #003049;
+}
+
+.detail-author,
+.detail-year,
+.detail-subjects {
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.back-btn {
+  display: inline-block;
+  background: none;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.3s ease;
+  margin: 0 0 1.5rem 0;  
+  align-self: flex-start;/
+}
+.book-details .back-btn {
+  align-self: flex-start; /* forces button left */
+  margin-bottom: 1.5rem;  /* gap between btn and image */
+}
+.back-btn:hover {
+  border-color: #27ae60;
+}
+
+/* Preview / Buy Button */
+.buy-now {
+  margin-top: 15px;
+  background: linear-gradient(45deg, #27ae60, #2ecc71);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(39, 174, 96, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+}
+.buy-now::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.3);
+  transition: all 0.5s ease;
+}
+.buy-now:hover::after {
+  left: 100%;
+}
+.buy-now:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(39,174,96,0.4);
+}
+
+/* Skeletons for details */
+.detail-skeleton .cover-skeleton {
+  width: 120px;
+  height: 160px;
+  margin: 1rem auto;
+  background: #e5e5e5;
+  border-radius: 6px;
+}
+.detail-skeleton .title-skeleton {
+  height: 18px;
+  width: 70%;
+  margin: 0.5rem auto;
+  background: #e5e5e5;
+  border-radius: 6px;
+}
+.detail-skeleton .button-skeleton {
+  height: 36px;
+  width: 40%;
+  margin: 1rem auto;
+  background: #e5e5e5;
+  border-radius: 50px;
+}
+
+/* Actions container for buttons */
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.actions .buy-now {
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
+}
+
