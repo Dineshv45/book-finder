@@ -19,9 +19,21 @@ export default function Home() {
   const [error, setError] = useState("");
   const [hasMore, setHasMore] = useState(true);
 
+  useEffect(() => {
+  const link = document.querySelector("link[rel~='icon']");
+  if (link) {
+    link.href = "/book.png"; // path in public folder
+  } else {
+    const newLink = document.createElement("link");
+    newLink.rel = "icon";
+    newLink.href = "/book.png";
+    document.head.appendChild(newLink);
+  }
+}, []);
+
   // Fetch trending books on first load
   useEffect(() => {
-    document.title = "📚 Book Finder";
+    document.title = "Book Finder";
     fetchBooks("the", 1, true); // default trending search
   }, []);
 
