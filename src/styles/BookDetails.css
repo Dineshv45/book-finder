@@ -49,8 +49,8 @@
   align-self: flex-start;/
 }
 .book-details .back-btn {
-  align-self: flex-start; /* forces button left */
-  margin-bottom: 1.5rem;  /* gap between btn and image */
+  align-self: flex-start; 
+  margin-bottom: 1.5rem;  
 }
 .back-btn:hover {
   border-color: #27ae60;
